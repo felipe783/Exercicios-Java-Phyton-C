@@ -19,15 +19,16 @@ public class Satelite {
         return nome;
     }
 
-    public void ativar_paineis(float energia_extra){
+    public boolean ativar_paineis(float energia_extra){
         this.energia -= energia_extra;
         if(this.energia<=0){
             System.out.println("Satelite "+ nome + " energia passou do limite MAX \nConsumo: " + energia );
             this.status="Desativado";
-            statusBO=false;
+            return false;
         }
         else{
             System.out.println("Satelite "+ nome + " Paineis ativado  \nConsumo: " + energia );
+            return true;
         }
     }
 

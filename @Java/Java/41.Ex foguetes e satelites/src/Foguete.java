@@ -4,7 +4,6 @@ public class Foguete {
     private float combustivel;
     private float carga;
     private String status;
-    private boolean statusBO = true;
 
     public Foguete(String nome, float combustivel, float carga, String status){
         this.nome = nome;
@@ -19,15 +18,15 @@ public class Foguete {
         this.combustivel += abastecimento;
     }
 
-    public void lancar(String status){
+    public boolean lancar(){
         if(this.combustivel>50){
             this.status = "Lançado";
+            return true;
         }
         else{
             this.status="Falha";
-            statusBO = false;
+            return false;
         }
-
     }
 
     @Override //So colocar um "...println(foguete)" ele vai imprimir bonito

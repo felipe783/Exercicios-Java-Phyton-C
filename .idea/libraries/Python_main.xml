@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Python-main">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/@Python/Python-main.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
