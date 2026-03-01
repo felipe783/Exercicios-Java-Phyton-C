@@ -1,0 +1,22 @@
+# Ignora executáveis
+*.exe
+*.out
+*.obj
+
+# Ignora arquivos temporários
+*.tmp
+*.log
+*.bak
+
+# Ignora pastas de build (se tiver)
+build/
+bin/
+obj/
+
+# Ignora arquivos de depuração
+*.pdb
+*.ilk
+
+# Ignora arquivos do sistema
+.DS_Store
+Thumbs.db
