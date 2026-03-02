@@ -11,6 +11,11 @@ public class Foguete {
         this.carga = carga;
         this.status = status;
     }
+
+    public void setStatus(String status ){
+        this.status=status;
+    }
+
     public String getFog(){
         return nome;
     }

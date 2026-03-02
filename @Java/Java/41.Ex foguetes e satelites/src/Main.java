@@ -25,7 +25,8 @@ public class Main{
 
         Missao_geral.Missao_Enviar(lista_missao,lista_satelites,lista_foguetes); //Enviar a missão
 
-        Missao_geral.Relatorios(lista_missao,lista_satelites,lista_foguetes); //Relatorios
+        int ID = Relatorios_Geral.Relatorios(lista_missao,lista_satelites,lista_foguetes); //Relatorios
 
+        Relatorios_Geral.Dados(lista_missao,lista_satelites,ID);
     }
 }

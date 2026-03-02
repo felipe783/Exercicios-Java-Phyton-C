@@ -15,19 +15,22 @@ public class Satelite {
         this.status=status;
     }
 
+    public void setStatus(String status ){
+        this.status=status;
+    }
     public String getSat(){
         return nome;
     }
 
-    public boolean ativar_paineis(float energia_extra){
-        this.energia -= energia_extra;
+    public boolean ativar_paineis(){
+        this.energia -= 20;
         if(this.energia<=0){
-            System.out.println("Satelite "+ nome + " energia passou do limite MAX \nConsumo: " + energia );
+            System.out.println("\u001B[31mSatelite " + nome + " energia passou do limite MAX \nConsumo: " + energia +"\u001B[0m" );
             this.status="Desativado";
             return false;
         }
         else{
-            System.out.println("Satelite "+ nome + " Paineis ativado  \nConsumo: " + energia );
+            System.out.println("\u001B[32mOs paineis do satelite " + nome + " foram ativado  \nConsumo: " + energia + "\u001B[0m" );
             return true;
         }
     }

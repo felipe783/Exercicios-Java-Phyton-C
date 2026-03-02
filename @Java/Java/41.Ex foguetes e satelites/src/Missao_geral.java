@@ -34,9 +34,7 @@ class Missao{
 public class Missao_geral {
     public static Scanner input = new Scanner(System.in);
 
-    public static void Missao_Enviar(ArrayList<Missao> lista_missao,
-                                     ArrayList<Satelite> lista_satelites,
-                                     ArrayList<Foguete> lista_foguetes){
+    public static void Missao_Enviar(ArrayList<Missao> lista_missao,ArrayList<Satelite>lista_satelites,ArrayList<Foguete> lista_foguetes){
 
         System.out.println("-----------------------------");
         System.out.println("Sim=1");
@@ -64,7 +62,15 @@ public class Missao_geral {
                             System.out.println("Foguete Lançado");
                             Missao missao = new Missao(nome_satelite,nome_foguete);
                             lista_missao.add(missao);
-                            System.out.println("Missão enviada! \nID: " + missao.getID());
+                        System.out.println("\u001B[32mMissão enviada!\u001B[0m" + "\n\u001B[33mID: " + missao.getID() + "\u001B[0m");
+                            f.setStatus("Lançado");
+
+                            for(Satelite s:lista_satelites){ //Setar o satelite em orbita
+                                if(s.getSat().equals(nome_satelite)){
+                                    s.setStatus("Em orbita");
+                                    s.ativar_paineis();
+                                }
+                            }
                         }
                         else{
                             System.out.println("Missão falha! \nPor conta da falta de combustivel");
@@ -74,8 +80,10 @@ public class Missao_geral {
             }
         }
     }
-
-    public static void Relatorios(ArrayList<Missao> lista_missao,ArrayList<Satelite> lista_satelites,ArrayList<Foguete> lista_foguetes){
+    /*
+    public static void Relatorios(ArrayList<Missao>lista_missao,
+                                  ArrayList<Satelite>lista_satelites,
+                                  ArrayList<Foguete> lista_foguetes){
         Scanner input = new Scanner(System.in);
         for(Missao missao:lista_missao){
             System.out.println(missao);
@@ -120,4 +128,5 @@ public class Missao_geral {
             }
         }
     }
+    */
 }
