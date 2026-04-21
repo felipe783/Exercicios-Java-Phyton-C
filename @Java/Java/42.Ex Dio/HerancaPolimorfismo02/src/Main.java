@@ -1,54 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
-        // =========================
-        // TODO: HERANÇA
-        // =========================
-        /*
-        Employee employee = new Employee();
-        Marnager marnager = new marnager();
-
-        marnager.setName("Felipe");
-        marnager.setLogin("felipe");
-        marnager.setPassword("123");
-
-        System.out.println(marnager.getName());
-        System.out.println(marnager.getLogin());
-        System.out.println(marnager.getPassword());
-
-        marnager.setName("Felipe");
-        marnager.setLogin("felipe");
-        marnager.setPassword("123");
-
-        System.out.println(marnager.getName());
-        System.out.println(marnager.getLogin());
-        System.out.println(marnager.getPassword());
-        */
-        /*
-        // =========================
-        // TODO: POLIMORFISMO
-        // =========================
-
-        // Objeto comum
-        Employee employee = new Employee();
-
-        // Polimorfismo: referência do tipo Employee apontando para marnager
-        Employee marnager = new marnager();
-
-        // Classe abstrata não pode ser instanciada diretamente
-        // AbsEmployee employee = new AbsEmployee(); // ERRO
-
-        // Forma correta: usar uma classe que estende a abstrata
-        AbsEmployee marnager2 = new Absmarnager();
-
-        marnager.setName("Felipe");
-
-        // Métodos específicos de marnager não são acessíveis aqui
-        // marnager.setLogin("felipe");
-        // marnager.setPassword("123");
-
-        System.out.println(marnager.getName());
-        */
         printEmployee(new AbsManager());
         printEmployee(new AbsSalesman());
     }
