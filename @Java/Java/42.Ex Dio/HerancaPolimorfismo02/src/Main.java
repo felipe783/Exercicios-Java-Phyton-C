@@ -1,15 +1,19 @@
+import domain.Employee;
+import domain.Manager;
+import domain.Salesman;
+
 public class Main {
     public static void main(String[] args) {
-        printEmployee(new AbsManager());
-        printEmployee(new AbsSalesman());
+        printEmployee(new Manager());
+        printEmployee(new Salesman());
     }
 
-    public static void printEmployee(AbsEmployee employee){
+    public static void printEmployee(Employee employee){
 
         System.out.printf("===%s===\n",employee.getClass().getCanonicalName());
 
         switch (employee){
-            case AbsManager manager -> {
+            case Manager manager -> {
                 manager.setSalary(5000);
                 manager.setCode("123");
                 manager.setName("Felipe");
@@ -23,20 +27,22 @@ public class Main {
                 System.out.println(manager.getLogin());
                 System.out.println(manager.getPassword());
                 System.out.println(manager.getCommission());
+                System.out.println(manager.getFullSalary(500));
             }
-            case AbsSalesman salesman -> {
+            case Salesman salesman -> {
                 salesman.setSalary(2800);
                 salesman.setCode("123456");
                 salesman.setName("Lucas");
                 salesman.setPercentPerSold(10);
+                salesman.setSoldAmount(1000);
 
                 System.out.println(salesman.getCode());
                 System.out.println(salesman.getSalary());
                 System.out.println(salesman.getName());
                 System.out.println(salesman.getPercentPerSold());
             }
-            default -> throw new IllegalStateException("Unexpected value: " + employee);
         }
+        System.out.println(employee.getFullSalary());
         System.out.printf("======\n");
     }
 }

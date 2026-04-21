@@ -1,9 +1,23 @@
-public abstract class AbsEmployee {
-    private String name;
-    private String code;
-    private String address;
-    private int age;
-    private double salary;
+package domain;
+
+public sealed abstract class Employee permits Manager, Salesman {
+    protected String name;
+    protected String code;
+    protected String address;
+    protected int age;
+    protected double salary;
+
+    public Employee(String name, String code, String address, int age, double salary) {
+        this.name = name;
+        this.code = code;
+        this.address = address;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public Employee() {
+
+    }
 
     public String getName() {
         return name;
@@ -44,4 +58,6 @@ public abstract class AbsEmployee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+    public abstract double getFullSalary();
 }

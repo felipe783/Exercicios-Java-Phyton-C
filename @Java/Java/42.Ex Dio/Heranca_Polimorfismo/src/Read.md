@@ -21,14 +21,14 @@ Você usa ele de forma geral, mas por trás cada um age do seu próprio jeito.
 
 ### 💻 Termos técnicos
 - Um objeto pode ser referenciado por um tipo mais genérico
-- Exemplo: `Employee manager = new Manager();`
+- Exemplo: `domain.Employee manager = new domain.Manager();`
 - Em tempo de compilação, só acessa métodos da classe base
 - Em tempo de execução, usa a implementação da classe real
 - Relacionado a **sobrescrita de métodos (override)**
 
 ---
 
-## 🧱 CLASSE ABSTRATA (Explicação simples)
+## 🧱 CLASSE ABSTRATA 
 É um modelo base.  
 Não pode ser usado direto, só serve pra outras classes usarem.
 
@@ -41,7 +41,7 @@ Não pode ser usado direto, só serve pra outras classes usarem.
 
 ---
 
-## 🚫 FINAL (Explicação simples)
+## 🚫 FINAL 
 Essa classe não pode ser usada como base pra outras.  
 Ela é o fim da linha.
 
@@ -72,3 +72,15 @@ Você controla quem pode usar.
 ## 💡 Observação
 Esses conceitos ajudam a organizar melhor o código,  
 evitar repetição e deixar tudo mais fácil de manter.
+
+## 🔥 RESUMO 
+
+- `extends` → herança entre classes
+- `super` → acessa coisas da classe pai
+- Polimorfismo → um tipo, vários comportamentos
+- Cada objeto responde do seu próprio jeito
+
+Isso deixa o código mais:
+- reutilizável
+- organizado
+- fácil de expandir 🚀
