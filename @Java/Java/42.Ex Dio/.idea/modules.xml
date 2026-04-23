@@ -3,12 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/43.Ex Dio.iml" filepath="$PROJECT_DIR$/.idea/43.Ex Dio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BigDecimal/BigDecimal.iml" filepath="$PROJECT_DIR$/BigDecimal/BigDecimal.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ex_Github/Ex_Github.iml" filepath="$PROJECT_DIR$/Ex_Github/Ex_Github.iml" />
       <module fileurl="file://$PROJECT_DIR$/Heranca_Polimorfismo/Heranca.iml" filepath="$PROJECT_DIR$/Heranca_Polimorfismo/Heranca.iml" />
       <module fileurl="file://$PROJECT_DIR$/HerancaPolimorfismo02/HerancaPolimorfismo02.iml" filepath="$PROJECT_DIR$/HerancaPolimorfismo02/HerancaPolimorfismo02.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lambda/Lambda.iml" filepath="$PROJECT_DIR$/Lambda/Lambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/Modulo_2/Modulo_2.iml" filepath="$PROJECT_DIR$/Modulo_2/Modulo_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Records/Records.iml" filepath="$PROJECT_DIR$/Records/Records.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sudoku/Sudoku.iml" filepath="$PROJECT_DIR$/Sudoku/Sudoku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SudokuClone/SudokuClone.iml" filepath="$PROJECT_DIR$/SudokuClone/SudokuClone.iml" />
     </modules>
   </component>
 </project>

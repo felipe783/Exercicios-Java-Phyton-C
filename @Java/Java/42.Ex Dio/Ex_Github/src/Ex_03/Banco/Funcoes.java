@@ -9,35 +9,25 @@ public class Funcoes{
 
     //Sacar
     public void sacar(double valor) {
-        if (valor <= 0) {
-            System.out.println("Valor inválido!");
-            return;
-        }
-        if (saldo + chequeEspecial >= valor) {
+        if (saldo + chequeEspecial >= valor) { //Verificar ce tem dinheiro pra comprar
             saldo -= valor;
-            if (saldo < 0) {
-                usando = true;
-            }
+            usando = (saldo<0);  //Saldo foi menor que zero ele vai usar o cheque especial
             System.out.println("Saque realizado!");
-        } else {
+        }
+        else {
             System.out.println("Saldo insuficiente!");
         }
     }
 
     // Pagar boleto
     public void pagarBoleto(double valor) {
-        if (valor <= 0) {
-            System.out.println("Valor invalido");
-            return;
-        }
-
         if (saldo + chequeEspecial >= valor) {
             saldo -= valor;
 
             //O cuque vai receber o saldo negativo
             if (saldo < 0) {
                 usando = true;
-                chequeEspecial = Math.abs(saldo); //Receber o saldo
+                chequeEspecial = Math.abs(saldo); //Receber o saldo(em modulo)
             }
             System.out.println("Boleto pago");
             //Cobra a taxa de 20%
